@@ -6,8 +6,19 @@ body {
     margin: 0;
     font-family: 'Kdam Thmor Pro', sans-serif;
     background-color: #0a0e10;
-    background-repeat: no-repeat;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+}
+
+.about-me {
+    background: url('../img/background.png') center center no-repeat;
     background-size: cover;
+    padding-bottom: 50px;
+    height: 100vh;
 }
 
 .color-red {
@@ -16,6 +27,10 @@ body {
 
 .color-orange {
     color: #ff9451;
+}
+
+.color-grey {
+    color: #c9c9c9;
 }
 
 header {
@@ -27,6 +42,7 @@ nav {
     text-align: center;
     position: relative;
     transform: translateY(calc(50px / 2 - 13px));
+    -webkit-transform: translateY(calc(50px / 2 - 13px));
 }
 
 nav > ul {
@@ -41,16 +57,15 @@ nav > ul > li {
     margin-left: 20px;
 }
 
-nav > ul > li.active {
+nav > ul > li > a.active {
     border-bottom: 2px solid #fff;
 }
 
-nav > ul > li:hover {
-    /*border-bottom: 2px solid #fff;*/
+nav > ul > li > a.nav-link:hover {
     transition: all .2s ease
 }
 
-nav > ul > li:hover::before {
+nav > ul > li > a.nav-link:hover::before {
     content: '';
     position: absolute;
     top: 25px;
@@ -106,6 +121,18 @@ a, a > i {
     color: #267dbb;
 }
 
+.link-orange {
+    color: #ff9451;
+}
+
+.link-orange:hover {
+    color: #c7723e;
+}
+
+.link-orange:active {
+    color: #c7723e;
+}
+
 p {
     padding: 0;
     margin: 0;
@@ -138,39 +165,112 @@ p {
     font-size: 25px;
 }
 
-.portfolio {
-    display: grid;
-    /*gap: 20px;*/
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: calc(100vh - 50px);
-    /*column-gap: 20px;*/
+.hello-6 {
+    padding-top: 5%;
     text-align: center;
-    align-items: center;
+    font-size: 40px;
 }
 
-div[class^='project'] {
-    width: 100%;
-    height: 100%;
+.hello-6 > a {
+    border-bottom: 2px #fff solid;
+}
+
+.portfolio {
+    color: #fff;
+}
+
+.portfolio ul li .project h2 {
+    text-shadow: 1px 1px 1px rgba(56, 56, 56, 0.5);
+}
+
+.portfolio ul {
+    background: #0a0e10;
+    padding: 50px 0;
+    margin: 0;
+}
+
+.portfolio ul li {
+    background: #32aaff;
     position: relative;
+    margin: 0 auto;
+    width: 5px;
+    padding-bottom: 40px;
+    list-style-type: none;
 }
 
-div[class^='project'] > img {
-    object-fit: cover;
-    object-position: center center;
-    width: 100%;
-    height: 100%;
+.portfolio ul li:last-child {
+    padding-bottom: 10px;
 }
 
-div[class^='project']:after {
-    content: 'test';
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.portfolio ul li:before {
+    content: '';
+    background: #faf8eb;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left: 50%;
     top: 0;
-    left: 0;
-    background:rgba(0, 0, 0, 0.6);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid #32aaff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.portfolio ul li .hidden {
+    opacity: 0;
+}
+
+.portfolio ul li .project {
+    background: #32aaff;
+    position: relative;
+    top: 10px;
+    width: 450px;
+    padding: 20px;
+}
+
+.portfolio ul li .project h2 {
+    color: #fff;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.portfolio ul li .project p {
+    text-align: center;
+}
+
+.portfolio ul li .project:before {
+    content: '';
+    background: #32aaff;
+    position: absolute;
+    top: 0;
+    width: 38px;
+    height: 5px;
+}
+
+.portfolio ul li:nth-child(odd) .project {
+    left: 52px;
+    background: #32aaff;
+    background: -webkit-linear-gradient(-45deg, #267dbb, #32aaff);
+    background: linear-gradient(-45deg, #267dbb, #32aaff);
+}
+
+.portfolio ul li:nth-child(odd) .project:before {
+    left: -38px;
+}
+
+.portfolio ul li:nth-child(even) .project {
+    left: calc(-450px - 85px);
+    background: #32aaff;
+    background: -webkit-linear-gradient(45deg, #267dbb, #32aaff);
+    background: linear-gradient(45deg, #267dbb, #32aaff);
+}
+
+.portfolio ul li:nth-child(even) .project:before {
+    right: -38px;
+}
+
+.align-left {
+    text-align: left !important;
 }
