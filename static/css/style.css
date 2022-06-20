@@ -1,0 +1,176 @@
+* {
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: #0a0e10;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.color-red {
+    color: #ff3737;
+}
+
+.color-orange {
+    color: #ff9451;
+}
+
+header {
+    background-color: #101518;
+    height: 50px;
+}
+
+nav {
+    text-align: center;
+    position: relative;
+    transform: translateY(calc(50px / 2 - 13px));
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+}
+
+nav > ul > li.active {
+    border-bottom: 2px solid #fff;
+}
+
+nav > ul > li:hover {
+    /*border-bottom: 2px solid #fff;*/
+    transition: all .2s ease
+}
+
+nav > ul > li:hover::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    z-index: 1;
+    border-bottom: 2px solid #fff;
+    animation: grow .2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+    100% {
+        width: 100%;
+    }
+}
+
+nav > ul > li > a:hover {
+    color: #fff;
+}
+
+nav > ul > li.margin-5 {
+    margin-left: 5px;
+}
+
+nav > ul > li:first-child {
+    margin-left: 0;
+}
+
+a:hover, a:active {
+    color: #8c9196;
+}
+
+a > i:hover, a > i:active {
+    color: #8c9196;
+}
+
+a, a > i {
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.link-blue {
+    color: #32aaff;
+}
+
+.link-blue:hover {
+    color: #267dbb;
+}
+
+.link-blue:active {
+    color: #267dbb;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.hello-1 {
+    padding-left: 20%;
+    padding-top: 5%;
+    font-size: 40px;
+}
+
+.hello-2 {
+    padding-left: 22%;
+    font-size: 25px;
+}
+
+.hello-3 {
+    padding-left: 60%;
+    font-size: 40px;
+}
+
+.hello-4 {
+    padding-left: 62%;
+    font-size: 25px;
+}
+
+.hello-5 {
+    padding-top: 20px;
+    padding-left: 60%;
+    font-size: 25px;
+}
+
+.portfolio {
+    display: grid;
+    /*gap: 20px;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: calc(100vh - 50px);
+    /*column-gap: 20px;*/
+    text-align: center;
+    align-items: center;
+}
+
+div[class^='project'] {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+div[class^='project'] > img {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+div[class^='project']:after {
+    content: 'test';
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.6);
+}
