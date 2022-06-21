@@ -274,3 +274,35 @@ p {
 .align-left {
     text-align: left !important;
 }
+
+footer {
+    background-color: #323238;
+    padding: 50px;
+    text-align: center;
+}
+
+.quote {
+    display: inline-block;
+    text-align: left;
+}
+
+.quote-quote {
+    float: left;
+}
+
+.quote-author {
+    float: right;
+    clear: both;
+}
+
+.quote {
+    font-size: 20px;
+}
+
+.contact-me {
+    margin-top: 50px;
+}
+
+.contact-me-link {
+    font-size: 25px;
+}

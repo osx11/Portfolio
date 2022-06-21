@@ -127,6 +127,17 @@
         </div>
     </main>
 
+    <footer>
+        <div class="quote">
+            <p id="quote-quote" class="quote-quote">Quote</p>
+            <p id="quote-author" class="quote-author">- Author</p>
+        </div>
+
+        <div class="contact-me">
+            <a href="https://t.me/osx11" target="_blank" class="link-blue contact-me-link">Contact me</a>
+        </div>
+    </footer>
+
     <script src="https://kit.fontawesome.com/ac46fd18ab.js" crossorigin="anonymous"></script>
     <script>
         document.querySelectorAll('.nav-link').forEach(nav_link => {
@@ -138,7 +149,7 @@
 
         function scrollToAnchor(e) {
             document.querySelectorAll('.nav-link').forEach(nav_link => {
-                let classlist = nav_link.classList;
+                const classlist = nav_link.classList;
                 classlist.remove('active');
 
                 if (nav_link.getAttribute('href') === e.currentTarget.getAttribute('href')) {
@@ -152,6 +163,22 @@
                 behavior: 'smooth',
                 block: 'start'
             })
+        }
+    </script>
+
+    <script>
+        const quote_field = document.getElementById("quote-quote");
+        const author_field = document.getElementById("quote-author");
+
+        function fetchQuote() {
+            return fetch('https://favqs.com/api/qotd').then(r => r.json());
+        }
+
+        window.onload = async function (e) {
+            const quote = await fetchQuote();
+
+            quote_field.innerText = '"' + quote.quote.body + '"';
+            author_field.innerText = '- ' + quote.quote.author;
         }
     </script>
 </body>
