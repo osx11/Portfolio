@@ -57,7 +57,17 @@ var QUOTE_FIELD = document.getElementById("quote-quote");
 var AUTHOR_FIELD = document.getElementById("quote-author");
 
 function fetchQuote() {
-    return fetch('https://favqs.com/api/qotd').then(function (r) { return r.json(); });
+    return __awaiter(this, void 0, Promise, function () {
+        var quote;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, fetch('https://favqs.com/api/qotd').then(function (r) { return r.json(); })];
+                case 1:
+                    quote = _a.sent();
+                    return [2 /*return*/, [quote.quote.body, quote.quote.author]];
+            }
+        });
+    });
 }
 window.onload = function (e) {
     return __awaiter(this, void 0, void 0, function () {
@@ -67,8 +77,8 @@ window.onload = function (e) {
                 case 0: return [4 /*yield*/, fetchQuote()];
                 case 1:
                     quote = _a.sent();
-                    QUOTE_FIELD.innerText = '"' + quote.quote.body + '"';
-                    AUTHOR_FIELD.innerText = '- ' + quote.quote.author;
+                    QUOTE_FIELD.innerText = '"' + quote[0] + '"';
+                    AUTHOR_FIELD.innerText = '- ' + quote[1];
                     return [2 /*return*/];
             }
         });

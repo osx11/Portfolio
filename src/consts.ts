@@ -1,2 +1,2 @@
-export const QUOTE_FIELD = document.getElementById("quote-quote");
-export const AUTHOR_FIELD = document.getElementById("quote-author");
+export const QUOTE_FIELD: HTMLElement = document.getElementById("quote-quote");
+export const AUTHOR_FIELD: HTMLElement = document.getElementById("quote-author");
