@@ -139,47 +139,8 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/ac46fd18ab.js" crossorigin="anonymous"></script>
-    <script>
-        document.querySelectorAll('.nav-link').forEach(nav_link => {
-            nav_link.addEventListener('click', function(e) {
-                e.preventDefault();
-                scrollToAnchor(e);
-            });
-        });
 
-        function scrollToAnchor(e) {
-            document.querySelectorAll('.nav-link').forEach(nav_link => {
-                const classlist = nav_link.classList;
-                classlist.remove('active');
-
-                if (nav_link.getAttribute('href') === e.currentTarget.getAttribute('href')) {
-                    classlist.add('active');
-                }
-            });
-
-            const blockID = e.currentTarget.getAttribute('href').replace('#', '');
-
-            document.getElementById(blockID).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
-        }
-    </script>
-
-    <script>
-        const quote_field = document.getElementById("quote-quote");
-        const author_field = document.getElementById("quote-author");
-
-        function fetchQuote() {
-            return fetch('https://favqs.com/api/qotd').then(r => r.json());
-        }
-
-        window.onload = async function (e) {
-            const quote = await fetchQuote();
-
-            quote_field.innerText = '"' + quote.quote.body + '"';
-            author_field.innerText = '- ' + quote.quote.author;
-        }
-    </script>
+    <script src="static/js/anchor_handler.js"></script>
+    <script src="static/js/quote_handler.js"></script>
 </body>
 </html>
