@@ -1,12 +1,14 @@
 import {QUOTE_FIELD, AUTHOR_FIELD} from "./consts";
 
-function fetchQuote() {
-    return fetch('https://favqs.com/api/qotd').then(r => r.json());
+async function fetchQuote(): Promise<[string, string]> {
+    const quote: any = await fetch('https://favqs.com/api/qotd').then((r: any) => r.json());
+
+    return [quote.quote.body, quote.quote.author];
 }
 
-window.onload = async function (e) {
-    const quote = await fetchQuote();
+window.onload = async function (e: Event) {
+    const quote: [string, string] = await fetchQuote();
 
-    QUOTE_FIELD.innerText = '"' + quote.quote.body + '"';
-    AUTHOR_FIELD.innerText = '- ' + quote.quote.author;
+    QUOTE_FIELD.innerText = '"' + quote[0] + '"';
+    AUTHOR_FIELD.innerText = '- ' + quote[1];
 }
