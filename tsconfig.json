@@ -1,4 +1,7 @@
 {
+  "include": ["src/*"],
+  "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
+
   "compilerOptions": {
     "lib": [
       "es2015",

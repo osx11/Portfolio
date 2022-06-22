@@ -1,11 +1,6 @@
-document.querySelectorAll('.nav-link').forEach((nav_link: HTMLElement) => {
-    nav_link.addEventListener('click', function(e: Event) {
-        e.preventDefault();
-        scrollToAnchor(e);
-    });
-});
-
 function scrollToAnchor(e: Event) {
+    e.preventDefault();
+
     const nav_link_clicked: HTMLLinkElement = e.currentTarget as HTMLLinkElement;
 
     document.querySelectorAll('.nav-link').forEach((nav_link: HTMLElement) => {
@@ -24,3 +19,5 @@ function scrollToAnchor(e: Event) {
         block: 'start'
     })
 }
+
+export {scrollToAnchor};
