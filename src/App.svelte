@@ -1,0 +1,133 @@
+<script lang="ts">
+	import {scrollToAnchor} from './anchor_handler';
+	import {setQuote} from './quote_handler';
+
+	setQuote();
+</script>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a on:click={scrollToAnchor} href="#about-me" class="nav-link active">About Me</a></li>
+				<li><a on:click={scrollToAnchor} href="#portfolio" class="nav-link">Portfolio</a></li>
+				<li><a href="https://vk.com/osx_11" target="_blank"><i class="fa-brands fa-vk"></i></a></li>
+				<li class="margin-5" ><a href="https://github.com/osx_11" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+				<li class="margin-5"><a href="https://t.me/osx11" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="about-me" class="about-me">
+			<p class="hello-1">Hi! I'm Grigory!</p>
+			<p class="hello-2">A <span class="color-orange">Java/Python programmer</span> from Kazan <br>With <span class="color-orange">3 year</span> experience</p>
+			<p class="hello-3">Specializes in:</p>
+			<p class="hello-4">Websites & Web applications <br>Desktop applications <br>Parsers <br>Social bots (VK, Discord, Telegram)</p>
+			<p class="hello-5">See my <a href="https://github.com/osx11" target="_blank" class="link-blue">GitHub</a></p>
+			<p class="hello-6"><a href="#portfolio" class="nav-link">Look at my portfolio below</a></p>
+		</div>
+
+		<div id="portfolio" class="portfolio">
+			<ul>
+				<li>
+					<div class="project">
+						<h2>Right now...</h2>
+						<p>
+							Between projects I'm doing many small stuff like server maintenance or maintenance
+							the existing projects, fixing bugs and working as a support agent for my main project.
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="project">
+						<h2>April 2022 <br>Market emulation</h2>
+						<p>
+							This is an artificial project. The application was developed with the aim of practical
+							application of design patterns and learning to design the architecture of the application.
+							The main task was to create an application in which it would be easy to add new functions
+							(in my case, such functions, for example, are console commands for which you need to check
+							the syntax, process and report the result). In addition, the project was also aimed at
+							developing communication skills, as this is a team project. The team and I thought about the
+							architecture, I wrote the code, and we wrote a progress report. <br><br>
+
+							<span class="color-grey">Used technologies: Pure Java <br></span>
+							<a href="https://github.com/osx11/SSAD_Market" target="_blank" class="link-orange">See on github</a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="project">
+						<h2>April 2021 <br>Flight Statistics</h2>
+						<p>
+							As I am fond of aviation, the project was created to conveniently store the history of my
+							flights in flight simulators. It has a user-friendly interface with a date-time scale so
+							that you can visually see the duration of any flight. It is able to record the flight
+							through the connection with the flight simulator. You can make a pre-registration of a
+							future flight and see detailed information about it. Automatic estimation of flight distance
+							and conversion of 4-letter airport code to airport city using remote database API. The
+							graphical interface was created using the PyQT5 library, without any additional graphical
+							programs. <br><br>
+
+							<span class="color-grey">Used technologies: Python, Peewee (ORM), Matplotlib, Shapefiles, PyQT5. <br></span>
+							<a href="https://github.com/osx11/FlightStatistics" target="_blank" class="link-orange">See on github</a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="project">
+						<h2>April 2020 <br>Sentiment Analysis</h2>
+						<p>
+							The project was developed for presentation at a scientific and practical conference.
+							Although I do not specialize in neural networks and machine learning, the project shows that
+							I am able to use even a technology that I have never touched before. An auxiliary
+							questionnaire website was also created for the project. The program can predict the
+							emotional coloring of the text both by entering text into the corresponding line, and by
+							reading a lot of texts from a file and evaluating each of them separately. <br><br>
+
+							<span class="color-grey">Used technologies: Python, Keras, Django, PyQT5 <br></span>
+							<a href="https://github.com/osx11/Sentiment-analysis" target="_blank" class="link-orange">See on github</a>
+					</div>
+				</li>
+				<li>
+					<div class="project">
+						<h2>February 2019 <br>Complaints and Ban Appeals System</h2>
+						<p>
+							An active project, originally developed to accept applications within an online game, now
+							has many purposes. Currently used by real people for two years now, maintained by me.
+							Implemented functions: sending/reviewing complaints/appeals, personnel reporting, work with
+							personnel, personnel ranks, remote execution of commands, access to logs on a remote server.
+							The website is associated with the online game and the remote server in various ways and can
+							access them to fulfill the user's requests. <br><br>
+
+							<span class="color-grey">Used technologies: Python, Django, Apache, WSGI, Docker, SQLite <br></span>
+							<a href="https://github.com/osx11/MSCaBAS" target="_blank" class="link-orange">See on github</a>
+					</div>
+				</li>
+				<li>
+					<div class="project">
+						<h2>June 2019 <br>An RPG plugin for online game</h2>
+						<p>
+							An active project, used by hundreds of people daily. The project is the introduction of an
+							RPG component into a popular online game. The project rather shows the ability to think
+							through a complex complex system with a large number of relationships. Continues to be
+							developed and maintained at the present time. <br><br>
+
+							<span class="color-grey">Used technologies: Java, Bukkit <br></span>
+							<a href="https://github.com/osx11/MagicStoreLevels" target="_blank" class="link-orange">See on github</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</main>
+
+	<footer>
+		<div class="quote">
+			<p id="quote-quote" class="quote-quote">Quote</p>
+			<p id="quote-author" class="quote-author">- Author</p>
+		</div>
+
+		<div class="contact-me">
+			<a href="https://t.me/osx11" target="_blank" class="link-blue contact-me-link">Contact me</a>
+		</div>
+	</footer>
+</body>
