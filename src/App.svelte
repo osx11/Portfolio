@@ -40,6 +40,17 @@
 				</li>
 				<li>
 					<div class="project">
+						<h2>June 2022 <br>Portfolio website</h2>
+						<p>
+							This is a website you are currently on. <br><br>
+							
+							<span class="color-grey">Used technologies: TypeScript, Svelte</span>
+							<a href="https://github.com/osx11/osx11.github.io" target="_blank" class="link-orange">See on github</a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="project">
 						<h2>April 2022 <br>Market emulation</h2>
 						<p>
 							This is an artificial project. The application was developed with the aim of practical
