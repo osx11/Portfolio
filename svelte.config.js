@@ -8,6 +8,9 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
+		paths: {
+			base: "/Portfolio",
+		},
 		prerender: {
 			default: true,
 		},
