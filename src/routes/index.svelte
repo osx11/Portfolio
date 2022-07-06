@@ -3,7 +3,7 @@
 	import Portfolio from "../lib/Portfolio.svelte";
 	import Quotes from "../lib/Quotes.svelte";
 
-	import {scrollToAnchor} from '../anchor_handler';
+	import {scrollToAnchor} from '../anchor_handler.ts';
 </script>
 
 <head>
