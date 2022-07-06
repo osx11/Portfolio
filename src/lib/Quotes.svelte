@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {setQuote} from './quote_handler.ts';
+    import {setQuote} from './quote_handler';
 
     setQuote();
 </script>
