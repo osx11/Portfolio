@@ -17,6 +17,8 @@ jobs:
           node-version: '16'
       - name: Run continuous integration
         run: npm ci
+      - name: Lint
+        run: npm run lint
       - name: Build
         run: npm run build
       - name: Deploy to pages
