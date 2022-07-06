@@ -34,4 +34,6 @@
 			<a href="https://t.me/osx11" target="_blank" class="link-blue contact-me-link">Contact me</a>
 		</div>
 	</footer>
+
+	<script src="https://kit.fontawesome.com/ac46fd18ab.js" crossorigin="anonymous"></script>
 </body>
