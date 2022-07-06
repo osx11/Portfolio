@@ -9,7 +9,7 @@ const config = {
 
 	kit: {
 		paths: {
-			base: "/osx11.github.io",
+			base: "",
 		},
 		prerender: {
 			default: true,
