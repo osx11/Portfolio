@@ -4,17 +4,11 @@ async function fetchQuote(): Promise<[string, string]> {
     return [quote.quote.body, quote.quote.author];
 }
 
-async function setQuote() {
+async function setQuote(quote_field: HTMLElement, author_field: HTMLElement) {
     const quote: [string, string] = await fetchQuote();
 
-    // @ts-ignore
-    const QUOTE_FIELD: HTMLElement = document.getElementById("quote-quote");
-
-    // @ts-ignore
-    const AUTHOR_FIELD: HTMLElement = document.getElementById("quote-author");
-
-    QUOTE_FIELD.innerText = '"' + quote[0] + '"';
-    AUTHOR_FIELD.innerText = '- ' + quote[1];
+    quote_field.innerText = '"' + quote[0] + '"';
+    author_field.innerText = '- ' + quote[1];
 }
 
 export {setQuote};
