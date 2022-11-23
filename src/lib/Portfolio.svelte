@@ -5,7 +5,7 @@
 <div id="portfolio" class="portfolio">
     <ul>
         <li>
-            <Project header="Right now..."
+            <Project header="August 2022 - Now"
                      description="I'm working as a fullstack developer in Kazan"/>
         </li>
         <li>
