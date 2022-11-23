@@ -6,8 +6,7 @@
     <ul>
         <li>
             <Project header="Right now..."
-                     description="Between projects I'm doing many small stuff like server maintenance or maintenance
-                     the existing projects, fixing bugs and working as a support agent for my main project."/>
+                     description="I'm working as a fullstack developer in Kazan"/>
         </li>
         <li>
             <Project date="June 2022"
